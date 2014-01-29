@@ -4,29 +4,51 @@ import java.util.Scanner;
 
 public class Bille {
 	
-	private int CooDepart;
-	private int CooArrivee;
+	private int CooAbsDepart;
+	private int CooAbsArrivee;
+	private int CooOrdDepart;
+	private int CooOrdArrivee;
 	public boolean possible;
 	private Scanner sc = new Scanner (System.in);
 	
-	public int GetCooDepart(int CooDep)
+	public int GetCooAbsDepart(int CooAbsDep)
 	{
-		return CooDepart;
+		return CooAbsDepart;
 	}
 	
-	public int GetCooArrivee(int CooArr)
+	public int GetCooAbsArrivee(int CooAbsArr)
 	{
-		return CooArrivee;
+		return CooAbsArrivee;
 	}
 	
-	public void SetCooDepart(int CooDep)
+	public int GetCooOrdDepart(int CooOrdDep)
 	{
-		this.CooDepart = CooDep;
+		return CooOrdDepart;
 	}
 	
-	public void SetCooArrivee(int CooArr)
+	public int GetCooOrdArrivee(int CooOrdArr)
 	{
-		this.CooArrivee = CooArr;
+		return CooOrdArrivee;
+	}
+	
+	public void SetCooAbsDepart(int CooAbsDep)
+	{
+		this.CooAbsDepart = CooAbsDep;
+	}
+	
+	public void SetCooAbsArrivee(int CooAbsArr)
+	{
+		this.CooAbsArrivee = CooAbsArr;
+	}
+	
+	public void SetCooOrdDepart(int CooOrdDep)
+	{
+		this.CooOrdDepart = CooOrdDep;
+	}
+	
+	public void SetCooOrdArrivee(int CooOrdArr)
+	{
+		this.CooOrdArrivee = CooOrdArr;
 	}
 	
 	public boolean EstPossible()
@@ -41,14 +63,18 @@ public class Bille {
 	
 	public void SelectionnerBille()
 	{
-		System.out.println("Saisir les coordonnées de la bille :");
-		SetCooDepart(sc.nextInt());	
+		System.out.println("Saisir l'abscisse de la bille :");
+		SetCooAbsDepart(sc.nextInt());
+		System.out.println("Saisir l'ordonnée de la bille :");
+		SetCooOrdDepart(sc.nextInt());
 	}
 	
 	public void DeplacerBille()
 	{
-		System.out.println("Saisir les coordonnées de la case à utiliser :");
-		SetCooArrivee(sc.nextInt());
+		System.out.println("Saisir l'abscisse de la case voulue :");
+		SetCooAbsArrivee(sc.nextInt());
+		System.out.println("Saisir l'ordonnée de la case voulue :");
+		SetCooOrdArrivee(sc.nextInt());
 	}
 	
 	

@@ -1,6 +1,6 @@
 package Solitaire;
 
-public class Plateau {
+public class Plateau extends Bille {
 
 	public int[][] plateau = new int[7][7];
 	
