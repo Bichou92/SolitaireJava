@@ -8,8 +8,8 @@ public class Bille {
 	private int CooAbsArrivee;
 	private int CooOrdDepart;
 	private int CooOrdArrivee;
-	private int NbBilles = 30;
-	public boolean possible;
+	private int NbBilles = 32;
+	public boolean possible = true;
 	private Scanner sc = new Scanner (System.in);
 		
 	public int GetCooAbsDepart(int CooAbsDep)
@@ -86,10 +86,5 @@ public class Bille {
 		SetCooAbsArrivee(sc.nextInt());
 		System.out.println("Saisir l'ordonnée de la case voulue :");
 		SetCooOrdArrivee(sc.nextInt());
-	}
-	
-	public void EnleveBille()
-	{
-		
 	}
 }
