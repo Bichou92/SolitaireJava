@@ -8,9 +8,10 @@ public class Bille {
 	private int CooAbsArrivee;
 	private int CooOrdDepart;
 	private int CooOrdArrivee;
+	private int NbBilles = 30;
 	public boolean possible;
 	private Scanner sc = new Scanner (System.in);
-	
+		
 	public int GetCooAbsDepart(int CooAbsDep)
 	{
 		return CooAbsDepart;
@@ -51,6 +52,16 @@ public class Bille {
 		this.CooOrdArrivee = CooOrdArr;
 	}
 	
+	public int getNbBilles()
+	{
+		return NbBilles;
+	}
+
+	public void setNbBilles(int nbBilles) 
+	{
+		this.NbBilles = nbBilles;
+	}
+
 	public boolean EstPossible()
 	{
 		return possible;
@@ -77,6 +88,8 @@ public class Bille {
 		SetCooOrdArrivee(sc.nextInt());
 	}
 	
-	
-	
+	public void EnleveBille()
+	{
+		
+	}
 }
