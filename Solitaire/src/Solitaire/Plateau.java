@@ -1,8 +1,9 @@
 package Solitaire;
 
-public class Plateau extends Bille {
+public class Plateau {
 
 	public int[][] plateau = new int[7][7];
+	public final static int VIDE = 1, OCCUPE = 2;
 	
 	public void RemplirPlateau() 
 	{	
@@ -10,14 +11,23 @@ public class Plateau extends Bille {
 		{
 			for(int j = 0; j < plateau.length; j++) 
 			{
-			    SetPlateauRempli(i, j, 2);
+			    SetPlateauRempli(i, j, OCCUPE);
 			
 				if (i==3 && j==3) 
 				{
-					SetPlateauRempli(i, j, 1);
+					SetPlateauRempli(i, j, VIDE);
 				}
 				
 			}
+		}
+	}
+	
+	private String transform(int carreau) {
+		switch(carreau)
+		{
+		case VIDE : return "[ ]";
+		case OCCUPE : return "[X]";
+		default: return "   ";
 		}
 	}
 	
@@ -72,19 +82,10 @@ public class Plateau extends Bille {
 	{
 		for (int i = 0; i < plateau.length; i++) {
 			for (int j = 0; j < plateau.length; j++) {	
-				System.out.print(transform(plateau[i][j]));
+				System.out.print(transform(GetPlateauRempli(i,j)));
 			}
 			System.out.println();
 		}	
-	}
-
-	private String transform(int carreau) {
-		switch(carreau)
-		{
-		case 1 : return "[ ]";
-		case 2 : return "[X]";
-		default: return "   ";
-		}
 	}
 		
 }
